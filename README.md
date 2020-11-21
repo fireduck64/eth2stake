@@ -30,6 +30,8 @@ For debian, here are the quick docker install commands:
     apt-get update
     apt-get install docker-ce docker-ce-cli containerd.io docker-compose
 
+You'll need to add the user you plan on using to the docker group.  Edit /etc/group
+
 ### Additional packages
 
 Some of the scripts use the json query program and curl
