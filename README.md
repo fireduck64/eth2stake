@@ -25,6 +25,12 @@ For debian, here are the quick docker install commands:
     apt-get update
     apt-get install docker-ce docker-ce-cli containerd.io docker-compose
 
+### Additional packages
+
+Some of the scripts use the json query program and curl
+ 
+    apt-get install jq curl
+
 ### Disk Space
 
 Geth is a monster.  Not sure how big lighthouse eth2 db will end up being.
@@ -57,6 +63,15 @@ Next you need to import those keys into where lighthouse can use them thusly:
     lighthouse-cli.sh --testnet mainnet account validator import --directory /root/validator_keys
 
 ### Operation
+
+Geth takes forever to sync.  Once it is done, geth-height.sh will return something like:
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": "0xac5a51"
+}
+
 
 Look at logs:
 
