@@ -1,5 +1,7 @@
 
-mkdir -p ~/data/lighthouse
+docker volume create lighthouse_vc_vol
 
-docker run -it -v ~/data/validator_keys:/root/validator_keys -v ~/data/lighthouse:/root/.lighthouse sigp/lighthouse lighthouse $*
+docker run -it --rm -v ~/data/validator_keys:/root/validator_keys \
+  --mount 'type=volume,src=lighthouse_vc_vol,dst=/root/.lighthouse' \
+  sigp/lighthouse lighthouse $*
 

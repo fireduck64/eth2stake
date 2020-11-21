@@ -1,6 +1,7 @@
 
-mkdir -p ~/data/lighthouse
+docker volume create lighthouse_b_vol
 
-
-docker run -d --restart always --name lighthouse-b --network host -v ~/data/lighthouse:/root/.lighthouse sigp/lighthouse lighthouse b --testnet mainnet --http --eth1 --eth1-endpoint http://localhost:8545
+docker run -d --restart always --name lighthouse-b --network host \
+  --mount 'type=volume,src=lighthouse_b_vol,dst=/root/.lighthouse' \
+  sigp/lighthouse lighthouse b --testnet mainnet --http --eth1 --eth1-endpoint http://localhost:8545
 

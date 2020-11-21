@@ -44,7 +44,7 @@ Some of the scripts use the json query program and curl
 ### Disk Space
 
 Geth is a monster.  Not sure how big lighthouse eth2 db will end up being.
-These scripts assume that ~/data has at least 300GB of space.  Plan on it growing.
+These scripts assume that /var/lib/docker has at least 300GB of space.  Plan on it growing.
 
 ### Path
 
