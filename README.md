@@ -1,6 +1,8 @@
 # eth2stake
 
 Some docker scripts and stuff to run eth2 staking on mainnet.
+It uses docker to make install easy.  It used geth for eth1 and lighthouse for eth2 (beacon and client).
+
 
 ## DISCLAIMER
 
@@ -9,6 +11,9 @@ While I am in general an expert on *SOME* cryptocurrencies, I am *NOT* an expert
 I could have some of this very wrong.  This is what I am doing, but it might not be right.
 
 You might lose funds or be slashed or be made fun of on the interwebs.
+
+I tell people what to do with their crypto all the damn time and I've never written a 
+disclaimer like this.  Pay attention to it.
 
 ## INSTRUCTIONS
 
