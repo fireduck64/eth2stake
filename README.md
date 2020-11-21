@@ -1,8 +1,11 @@
 # eth2stake
 
 Some docker scripts and stuff to run eth2 staking on mainnet.
-It uses docker to make install easy.  It used geth for eth1 and lighthouse for eth2 (beacon and client).
+It uses docker to make install easy.  
 
+ * geth for eth1
+ * lighthouse for eth2 (beacon and client)
+ * eth2.0-deposit-cli for key generation
 
 ## DISCLAIMER
 
@@ -56,7 +59,7 @@ These scripts assume the script are in the path.  Edit .bashrc or .profile or so
 ### Keys and containers
 
 After you get docker installed, go ahead and geth-start.sh
-That is going to take some time.
+That is going to take some time.  Probably a few days.
 
 Then use eth2deposit to make some keys.
   
@@ -79,15 +82,15 @@ Geth takes forever to sync.  Once it is done, geth-height.sh will return somethi
       "result": "0xac5a51"
     }
 
-
 Look at logs:
 
-docker logs -f <thing> 
-(geth, lighthouse-b, lighthouse-vc)
+    docker logs -f geth
+    docker logs -f lighthouse-b
+    docker logs -f lighthouse-vc
 
 Update and restart:
 
-eth2-update.sh
+    eth2-update.sh
 
 Don't get slashed.  If you have some problem and things are weird, stop lighthouse-vc for at least 20 minutes, probably more like a hour.  This will make sure your lighthouse-vc doesn't contradict an earlier run and get you slashed.
 
