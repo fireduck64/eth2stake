@@ -97,4 +97,8 @@ and *SLOWLY* go through the steps on https://launchpad.ethereum.org/
 
 Take your time.  Read the screen.
 
+### TODO
+
+* Once lighthouse is stable, switch to docker stable tag rather than latest
+* Add notes about monitoring (once it is clear how to do that)
 
