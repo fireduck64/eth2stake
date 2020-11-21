@@ -71,11 +71,11 @@ Next you need to import those keys into where lighthouse can use them thusly:
 
 Geth takes forever to sync.  Once it is done, geth-height.sh will return something like:
 
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": "0xac5a51"
-}
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": "0xac5a51"
+    }
 
 
 Look at logs:
