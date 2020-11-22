@@ -1,7 +1,10 @@
 #!/bin/bash
 
-docker pull ethereum/client-go:stable
-docker pull sigp/lighthouse
+. eth2-settings.sh
+
+
+docker pull $DOCKER_GETH
+docker pull $DOCKER_LIGHTHOUSE
 
 geth-stop.sh
 geth-start.sh
