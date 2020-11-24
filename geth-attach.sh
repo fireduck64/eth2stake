@@ -1,2 +1,2 @@
-docker container exec -it ethereum-node geth attach
+docker container exec -it geth geth attach
 

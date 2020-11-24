@@ -12,6 +12,6 @@ geth-start.sh
 lighthouse-b-stop.sh
 lighthouse-b-start.sh
 
-#lighthouse-vc-stop.sh
-#lighthouse-vc-start.sh
+lighthouse-vc-stop.sh
+lighthouse-vc-start.sh
 

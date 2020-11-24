@@ -10,5 +10,5 @@ docker volume create lighthouse_vc_vol
 
 docker run --rm --name lighthouse-v --network host \
   --mount 'type=volume,src=lighthouse_vc_vol,dst=/root/.lighthouse' \
-  $DOCKER_LIGHTHOUSE lighthouse vc --testnet mainnet --http --graffiti="$GRAFFITI"
+  $DOCKER_LIGHTHOUSE lighthouse vc --network mainnet --http --graffiti="$GRAFFITI"
 

@@ -1,4 +1,6 @@
 
+. eth2-settings.sh  
+
 docker volume create geth_vol
 
 docker run -d --restart always --name geth \
