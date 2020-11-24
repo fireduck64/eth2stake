@@ -7,7 +7,7 @@
 export GRAFFITI="MediumRare"
 
 export DOCKER_GETH=ethereum/client-go:stable
-export DOCKER_LIGHTHOUSE=sigp/lighthouse:stable
+export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
 
 if which eth2-settings.local.sh >> /dev/null
 then
