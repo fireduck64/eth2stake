@@ -1,3 +1,6 @@
+#!/bin/bash
+
+echo "Starting geth"
 
 . eth2-settings.sh  
 

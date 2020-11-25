@@ -70,7 +70,7 @@ Follow the instructions or you are an idiot and everyone will laugh at you.  Sav
 
 Next you need to import those keys into where lighthouse can use them thusly:
 
-    lighthouse-cli.sh --testnet mainnet account validator import --directory /root/validator_keys
+    lighthouse-cli.sh --network mainnet account validator import --directory /root/validator_keys
 
 ### Operation
 

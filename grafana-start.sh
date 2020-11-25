@@ -1,3 +1,6 @@
+#!/bin/bash
+
+echo "Starting grafana"
 
 docker pull grafana/grafana
 

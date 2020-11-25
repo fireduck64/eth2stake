@@ -1,3 +1,6 @@
+#!/bin/bash
+
+echo "Starting prometheus"
 
 docker pull prom/prometheus
 

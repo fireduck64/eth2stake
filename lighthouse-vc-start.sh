@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting lighthouse validation client"
+
 
 . eth2-settings.sh
 

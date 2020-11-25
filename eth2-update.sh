@@ -3,15 +3,18 @@
 . eth2-settings.sh
 
 
+echo "Pulling new images:"
+
 docker pull $DOCKER_GETH
 docker pull $DOCKER_LIGHTHOUSE
 
-geth-stop.sh
-geth-start.sh
-
-lighthouse-b-stop.sh
-lighthouse-b-start.sh
-
+echo "----------------"
 lighthouse-vc-stop.sh
+lighthouse-b-stop.sh
+geth-stop.sh
+
+geth-start.sh
+lighthouse-b-start.sh
 lighthouse-vc-start.sh
+
 
