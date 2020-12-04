@@ -32,3 +32,8 @@ scrape_configs:
     metrics_path: /metrics    
     static_configs:
       - targets: ['localhost:5054']
+  - job_name: 'vc'
+    metrics_path: /metrics    
+    static_configs:
+      - targets: ['localhost:5064']
+      
