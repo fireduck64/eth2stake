@@ -18,6 +18,21 @@ You might lose funds or be slashed or be made fun of on the interwebs.
 I tell people what to do with their crypto all the damn time and I've never written a 
 disclaimer like this.  Pay attention to it.
 
+These scripts are working well for me on mainnet.  
+
+There is one main rule: NEVER RUN MULTIPLE VALIDATOR CLIENTS (VC) WITH YOUR KEYS LOADED.
+
+Safe things to do:
+* Restart a vc with the same volume (lighthouse-vc).  The database there will protect you from slashing.
+* Stop a vc.  Wait 20 minutes.  Start the vc somewhere else or with a new volume.  No need to copy database, it is out of date by now anyways.
+
+Bad/Questionable things to do:
+* Have you keys loaded in multiple VC volumes (on different hosts or whatever) and just don't start one.  You are an accidental start away from being slashed.  If you have a backup host, don't import the validator keys until you need them.
+* Copy database from one machine to another to move a VC quickly.  You are a path mistake/copy mistake away from being slashed.
+
+The loss of income from a few hours or days are *nothing* compared to being slashed.  A day's income for a validator: 0.02 ETH or so.  Slashing: -16 ETH, plus the remaining 16 ETH are locked until phase who_the_hell_knows.
+
+
 ## INSTRUCTIONS
 
 ### Docker
@@ -95,8 +110,6 @@ Update and restart:
 Don't get slashed.  If you have some problem and things are weird, stop lighthouse-vc for at least 20 minutes, probably more like a hour.  This will make sure your lighthouse-vc doesn't contradict an earlier run and get you slashed.
 
 This advice applies when restoring from backup, recovering from disk corruption or whatever.
-
-In all honestly, I don't know.
 
 The docker setups in the start scripts should automatically restart these services with your host.
 
