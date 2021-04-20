@@ -11,6 +11,6 @@ docker run -it --rm \
   --mount 'type=volume,src=geth_vol,dst=/vol/geth' \
   --mount 'type=volume,src=lighthouse_b_vol,dst=/vol/lighthouse_b' \
   --mount 'type=volume,src=lighthouse_vc_vol,dst=/vol/lighthouse_vc' \
-  debian
+  1209k/util
 
 

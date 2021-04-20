@@ -8,6 +8,7 @@ export GRAFFITI="MediumRare"
 
 export DOCKER_GETH=ethereum/client-go:stable
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
+export ETH1_ENDPOINTS=http://localhost:8545
 
 if which eth2-settings.local.sh >> /dev/null
 then
