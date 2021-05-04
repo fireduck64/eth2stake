@@ -4,7 +4,8 @@
 # chmod 755 eth2-settings.local.sh
 # and put your overrides there
 
-export GRAFFITI="MediumRare"
+export GRAFFITI_SETTINGS="--graffiti ShrimpHand"
+
 
 export DOCKER_GETH=ethereum/client-go:stable
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
