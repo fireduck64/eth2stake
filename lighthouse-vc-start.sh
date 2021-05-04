@@ -6,7 +6,7 @@ echo "Starting lighthouse validation client"
 
 docker volume create lighthouse_vc_vol
 
-docker run  -d --restart no --name lighthouse-vc --network host \
+docker run  -d --restart always --name lighthouse-vc --network host \
   --mount 'type=volume,src=lighthouse_vc_vol,dst=/root/.lighthouse' \
   -v ~/data:/vol/data $CLOUDLOCK_SETTINGS \
   $DOCKER_LIGHTHOUSE $CLOUDLOCK_COMMAND lighthouse vc --network mainnet --http --metrics \
