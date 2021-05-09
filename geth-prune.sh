@@ -1,8 +1,6 @@
 #!/bin/bash
 
-echo "Starting geth"
-
-echo "THIS TTHING TAKES A LONG TIME, LIKE HOURS AND GETH WILL BE DOWN."
+echo "THIS THING TAKES A LONG TIME, LIKE HOURS AND GETH WILL BE DOWN."
 echo "If you not into that, ctrl+c now."
 echo "Sleeping for 30 seconds"
 
