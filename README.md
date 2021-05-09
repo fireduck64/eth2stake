@@ -113,6 +113,13 @@ This advice applies when restoring from backup, recovering from disk corruption 
 
 The docker setups in the start scripts should automatically restart these services with your host.
 
+### Configuration
+
+There is a file eth2-settings.sh.  Any of these settings can be overridden by making a script named
+'eth2-settings.local.sh', making it mod 755 and put it in the path.
+
+
+
 ### Funding
 
 After you are done with this setup, you are ready to fund you validators.  Take the files in ~/data/validator_keys
@@ -124,4 +131,33 @@ Take your time.  Read the screen.
 
 * Once lighthouse is stable, switch to docker stable tag rather than latest
 * Add notes about monitoring (once it is clear how to do that)
+
+### How to use CloudLock
+
+EXPERIMENTAL
+
+https://github.com/fireduck64/cloudlock/tree/main/lighthouse
+
+Cloudlock is a locking agent that can be used as a wrapper around lighthouse-vc.
+If you want to run multiple VCs and have them automatically failover, here are some example configs:
+
+```
+export DOCKER_LIGHTHOUSE=repo.1209k.com/1209k/cloudlock
+
+export CLOUDLOCK_SETTINGS=" \
+  -e cloudlock_aws_key_id=KEY_ID \
+  -e cloudlock_aws_secret=SECRET \
+  -e cloudlock_dynamodb_table=eth2-vc \
+  -e cloudlock_aws_region=us-west-2 \
+  -e cloudlock_lock_label=lighthouse-vc \
+  -e cloudlock_my_id=node1"
+
+export CLOUDLOCK_COMMAND="cloudlock"
+
+```
+
+This uses the docker file built from https://github.com/fireduck64/cloudlock/tree/main/lighthouse
+
+You'll have to follow the setup instructions over in cloudlock for how to setup the AWS DynamoDB table and user.
+
 
