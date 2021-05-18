@@ -4,6 +4,12 @@ echo "Starting lighthouse validation client"
 
 . eth2-settings.sh
 
+if [ ! "$VC_ENABLED" = "true" ]
+then
+  echo "Not starting lighthouse_vc, disabled by VC_ENABLED setting"
+  exit 0
+fi
+
 docker volume create lighthouse_vc_vol
 
 docker run  -d --restart always --name lighthouse-vc --network host \

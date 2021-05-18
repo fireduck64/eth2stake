@@ -14,6 +14,8 @@ export ETH1_ENDPOINTS=http://localhost:8545
 export CLOUDLOCK_SETTINGS=""
 export CLOUDLOCK_COMMAND=""
 
+export VC_ENABLED="true"
+
 if which eth2-settings.local.sh >> /dev/null
 then
   . eth2-settings.local.sh
