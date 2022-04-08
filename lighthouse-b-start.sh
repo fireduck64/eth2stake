@@ -11,4 +11,5 @@ docker run -d --restart always --name lighthouse-b --network host \
   $DOCKER_LIGHTHOUSE lighthouse b --network mainnet --http --metrics \
   --http-address :: \
   --validator-monitor-auto \
+  $BEACON_OPTS \
   --eth1 --eth1-endpoints $ETH1_ENDPOINTS

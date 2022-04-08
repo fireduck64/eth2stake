@@ -16,6 +16,7 @@ export CLOUDLOCK_SETTINGS=""
 export CLOUDLOCK_COMMAND=""
 
 export VC_ENABLED="true"
+export BEACON_OPTS=""
 
 if which eth2-settings.local.sh >> /dev/null
 then
