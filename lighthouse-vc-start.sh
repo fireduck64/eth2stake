@@ -17,5 +17,6 @@ docker run  -d --restart always --name lighthouse-vc --network host \
   -v ~/data:/vol/data $CLOUDLOCK_SETTINGS \
   $DOCKER_LIGHTHOUSE $CLOUDLOCK_COMMAND lighthouse vc --network mainnet --metrics \
   --beacon-nodes $BEACON_ENDPOINTS \
+  ----suggested-fee-recipient $FEE_RECIPIENT \
   $GRAFFITI_SETTINGS
 
