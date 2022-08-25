@@ -4,8 +4,6 @@ echo "Starting geth"
 
 . eth2-settings.sh  
 
-eth2-secret-setup.sh
-
 docker volume create geth_vol
 
 docker run -d --restart always --name geth \
