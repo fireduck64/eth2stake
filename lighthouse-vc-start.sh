@@ -12,6 +12,7 @@ fi
 
 docker volume create lighthouse_vc_vol
 
+# --suggested-fee-recipient $FEE_RECIPIENT \
 docker run  -d --restart always --name lighthouse-vc --network host \
   --mount 'type=volume,src=lighthouse_vc_vol,dst=/root/.lighthouse' \
   -v ~/data:/vol/data $CLOUDLOCK_SETTINGS \
