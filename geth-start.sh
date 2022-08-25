@@ -9,4 +9,5 @@ docker volume create geth_vol
 docker run -d --restart always --name geth \
           --mount 'type=volume,src=geth_vol,dst=/root/.ethereum' \
            --network host \
-           $DOCKER_GETH --http --http.addr 0.0.0.0 --http.vhosts '*'
+           $DOCKER_GETH --http --http.addr 0.0.0.0 --http.vhosts '*' \
+           --authrpc.addr 0.0.0.0 --authrpc.port 8551 --authrpc.vhosts '*'
