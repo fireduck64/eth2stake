@@ -21,6 +21,10 @@ export BEACON_OPTS=""
 # see https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html
 export FEE_RECIPIENT="0x36dae7c539d699afd646b5c973c73a3e8fcedd6d"
 
+# Should be replaced with your own
+export JWT_SECRET="0x4183fc805f9384a632b2ff4a5d54c8920ce8f9190bd0211260062444b3d236ed"
+
+
 if which eth2-settings.local.sh >> /dev/null
 then
   . eth2-settings.local.sh

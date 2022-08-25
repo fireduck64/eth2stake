@@ -4,6 +4,8 @@ echo "Starting geth"
 
 . eth2-settings.sh  
 
+eth2-secret-setup.sh
+
 docker volume create geth_vol
 
 docker run -d --restart always --name geth \
@@ -11,3 +13,4 @@ docker run -d --restart always --name geth \
            --network host \
            $DOCKER_GETH --http --http.addr 0.0.0.0 --http.vhosts '*' \
            --authrpc.addr 0.0.0.0 --authrpc.port 8551 --authrpc.vhosts '*'
+
