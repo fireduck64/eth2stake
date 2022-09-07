@@ -9,7 +9,7 @@ export GRAFFITI_SETTINGS="--graffiti ShrimpHand"
 
 export DOCKER_GETH=ethereum/client-go:stable
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
-export ETH1_ENDPOINTS=http://localhost:8545
+export DOCKER_NETHERMIND=nethermind/nethermind
 export EXEC_ENDPOINTS=http://localhost:8551
 export BEACON_ENDPOINTS=http://localhost:8052
 

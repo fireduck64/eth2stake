@@ -7,6 +7,7 @@ echo "Pulling new images:"
 
 docker pull $DOCKER_GETH
 docker pull $DOCKER_LIGHTHOUSE
+docker pull $DOCKER_NETHERMIND
 
 echo "----------------"
 lighthouse-vc-stop.sh
