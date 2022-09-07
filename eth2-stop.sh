@@ -6,6 +6,7 @@
 lighthouse-vc-stop.sh
 lighthouse-b-stop.sh
 geth-stop.sh
+nether-stop.sh
 
 
 
