@@ -10,7 +10,7 @@ docker run -d --restart always --name nethermind \
           --mount 'type=volume,src=nethermind_vol,dst=/nethermind/data' \
           --mount 'type=volume,src=eth_secret_vol,dst=/secrets' \
            --network host \
-           $DOCKER_NETHERMIND \
+           $DOCKER_NETHERMIND --datadir data \
            --JsonRpc.JwtSecretFile /secrets/jwtsecret \
            --HealthChecks.Enabled true \
            --JsonRpc.Port 8545 --JsonRpc.Host '*' \
