@@ -1,4 +1,4 @@
 #!/bin/bash
 
-curl -s http://localhost:18545/health|jq .
+curl -s http://localhost:8545/health|jq .
 

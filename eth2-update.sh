@@ -10,11 +10,14 @@ docker pull $DOCKER_LIGHTHOUSE
 docker pull $DOCKER_NETHERMIND
 
 echo "----------------"
+echo "Stopping services:"
 lighthouse-vc-stop.sh
 lighthouse-b-stop.sh
 geth-stop.sh
 nether-stop.sh
 
+echo "----------------"
+echo "Starting services:"
 if [ $EXEC_CLIENT = "geth" ]
 then
   geth-start.sh
