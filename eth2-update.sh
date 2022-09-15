@@ -11,13 +11,15 @@ docker pull $DOCKER_NETHERMIND
 
 echo "----------------"
 echo "Stopping services:"
-lighthouse-vc-stop.sh
-lighthouse-b-stop.sh
 geth-stop.sh
 nether-stop.sh
+lighthouse-b-stop.sh
+lighthouse-vc-stop.sh
 
 echo "----------------"
 echo "Starting services:"
+lighthouse-vc-start.sh
+lighthouse-b-start.sh
 if [ $EXEC_CLIENT = "geth" ]
 then
   geth-start.sh
@@ -27,7 +29,5 @@ then
   nether-start.sh
 fi
 
-lighthouse-b-start.sh
-lighthouse-vc-start.sh
 
 
