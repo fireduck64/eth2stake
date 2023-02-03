@@ -15,6 +15,8 @@ docker run -d --restart always --name nethermind \
            $DOCKER_NETHERMIND \
            --Network.MaxActivePeers 256 \
            --HealthChecks.Enabled true \
+           --Pruning.Mode full \
+           --JsonRpc.AdditionalRpcUrls 'http://127.0.0.1:1337|http|admin' \
            --JsonRpc.JwtSecretFile /secrets/jwtsecret \
            --JsonRpc.Port 8545 --JsonRpc.Host '*' \
            --JsonRpc.EnginePort 8551 --JsonRpc.EngineHost '*'
