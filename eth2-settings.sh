@@ -12,6 +12,8 @@ export EXEC_CLIENT=geth
 export DOCKER_GETH=ethereum/client-go:stable
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
 export DOCKER_NETHERMIND=nethermind/nethermind
+export DOCKER_MEV_BOOST=flashbots/mev-boost:latest
+
 export EXEC_ENDPOINTS=http://localhost:8551
 export BEACON_ENDPOINTS=http://localhost:8052
 
@@ -27,6 +29,8 @@ export FEE_RECIPIENT="0x36dae7c539d699afd646b5c973c73a3e8fcedd6d"
 # Should be replaced with your own
 export JWT_SECRET="0x4183fc805f9384a632b2ff4a5d54c8920ce8f9190bd0211260062444b3d236ed"
 
+export MEV_ENABLED="true"
+export MEV_RELAYS="https://0xac6e77dfe25ecd6110b8e780608cce0dab71fdd5ebea22a16c0205200f2f8e2e3ad3b71d3499c54ad14d6c21b41a37ae@boost-relay.flashbots.net"
 
 if which eth2-settings.local.sh >> /dev/null
 then

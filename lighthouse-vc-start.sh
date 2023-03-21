@@ -10,6 +10,12 @@ then
   exit 0
 fi
 
+MEV_OPTS=""
+if [ "$MEV_ENABLED" = "true" ]
+then
+  MEV_OPTS="--builder-proposals"
+fi
+
 docker volume create lighthouse_vc_vol
 
 docker run  -d --restart always --name lighthouse-vc --network host \
@@ -18,5 +24,5 @@ docker run  -d --restart always --name lighthouse-vc --network host \
   $DOCKER_LIGHTHOUSE $CLOUDLOCK_COMMAND lighthouse vc --network mainnet --metrics \
   --beacon-nodes $BEACON_ENDPOINTS \
   --suggested-fee-recipient $FEE_RECIPIENT \
-  $GRAFFITI_SETTINGS
+  $MEV_OPTS $GRAFFITI_SETTINGS
 

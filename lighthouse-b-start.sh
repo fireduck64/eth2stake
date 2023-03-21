@@ -4,6 +4,13 @@ echo "Starting lighthouse beacon"
 
 . eth2-settings.sh
 
+MEV_OPTS=""
+if [ "$MEV_ENABLED" = "true" ]
+then
+  MEV_OPTS="--builder http://localhost:18550"
+fi
+
+
 docker volume create lighthouse_b_vol
 
 docker run -d --restart always --name lighthouse-b --network host \
@@ -12,7 +19,7 @@ docker run -d --restart always --name lighthouse-b --network host \
   $DOCKER_LIGHTHOUSE lighthouse b --network mainnet --http --metrics \
   --http-address :: \
   --validator-monitor-auto \
-  $BEACON_OPTS \
+  $BEACON_OPTS $MEV_OPTS \
   --suggested-fee-recipient $FEE_RECIPIENT \
   --execution-endpoint $EXEC_ENDPOINTS \
   --execution-jwt /secrets/jwtsecret 
