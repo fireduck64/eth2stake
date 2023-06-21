@@ -11,7 +11,7 @@ docker run -d --restart always --name geth \
           --mount 'type=volume,src=eth_secret_vol,dst=/secrets' \
            --network host \
            $DOCKER_GETH --http --http.addr 0.0.0.0 --http.vhosts '*' \
-           --authrpc.addr 0.0.0.0 --authrpc.port 8551 --authrpc.vhosts '*' \
+           --authrpc.port 8551 --authrpc.vhosts '*' \
            --authrpc.jwtsecret /secrets/jwtsecret \
            --db.engine pebble
 

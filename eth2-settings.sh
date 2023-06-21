@@ -10,6 +10,7 @@ export GRAFFITI_SETTINGS="--graffiti ShrimpHand"
 export EXEC_CLIENT=geth
 
 export DOCKER_GETH=ethereum/client-go:stable
+export DOCKER_GETH=1209k/reth
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
 export DOCKER_NETHERMIND=nethermind/nethermind
 export DOCKER_MEV_BOOST=flashbots/mev-boost:latest
