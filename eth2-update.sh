@@ -6,6 +6,7 @@
 echo "Pulling new images:"
 
 docker pull $DOCKER_GETH
+docker pull $DOCKER_RETH
 docker pull $DOCKER_LIGHTHOUSE
 docker pull $DOCKER_NETHERMIND
 docker pull $DOCKER_MEV_BOOST
