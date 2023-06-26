@@ -36,6 +36,11 @@ if [ $EXEC_CLIENT = "nethermind" ]
 then
   nether-start.sh
 fi
+if [ $EXEC_CLIENT = "reth" ]
+then
+  reth-start.sh
+fi
+
 
 
 
