@@ -13,5 +13,5 @@ docker run -d --restart always --name geth \
            $DOCKER_GETH --http --http.addr 0.0.0.0 --http.vhosts '*' \
            --authrpc.port 8551 --authrpc.vhosts '*' \
            --authrpc.jwtsecret /secrets/jwtsecret \
-           --db.engine pebble
+           --db.engine pebble --state.scheme=path
 
