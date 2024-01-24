@@ -3,19 +3,15 @@
 . eth2-settings.sh
 
 
-echo "Pulling new images:"
 
-docker pull $DOCKER_GETH
-docker pull $DOCKER_RETH
-docker pull $DOCKER_LIGHTHOUSE
-docker pull $DOCKER_NETHERMIND
-docker pull $DOCKER_MEV_BOOST
+eth2-pull.sh
 
-echo "----------------"
+
 echo "Stopping services:"
 geth-stop.sh
 nether-stop.sh
 reth-stop.sh
+besu-stop.sh
 lighthouse-b-stop.sh
 lighthouse-vc-stop.sh
 mev-boost-stop.sh
@@ -40,7 +36,8 @@ if [ $EXEC_CLIENT = "reth" ]
 then
   reth-start.sh
 fi
-
-
-
+if [ $EXEC_CLIENT = "besu" ]
+then
+  besu-start.sh
+fi
 

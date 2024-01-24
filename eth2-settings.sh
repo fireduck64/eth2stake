@@ -13,6 +13,7 @@ export DOCKER_GETH=ethereum/client-go:stable
 export DOCKER_RETH=1209k/reth
 export DOCKER_LIGHTHOUSE=sigp/lighthouse:latest
 export DOCKER_NETHERMIND=nethermind/nethermind
+export DOCKER_BESU=hyperledger/besu:latest
 export DOCKER_MEV_BOOST=flashbots/mev-boost:latest
 
 export EXEC_ENDPOINTS=http://localhost:8551
