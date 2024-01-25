@@ -23,7 +23,7 @@ export CLOUDLOCK_SETTINGS=""
 export CLOUDLOCK_COMMAND=""
 
 export VC_ENABLED="true"
-export BEACON_OPTS=""
+export BEACON_OPTS="--checkpoint-sync-url http://hippo.1209k.com:5052"
 
 # see https://lighthouse-book.sigmaprime.io/suggested-fee-recipient.html
 export FEE_RECIPIENT="0x36dae7c539d699afd646b5c973c73a3e8fcedd6d"
